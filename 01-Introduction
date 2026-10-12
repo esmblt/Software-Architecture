@@ -1,0 +1,50 @@
+# Why Do We Need Software Architecture?
+
+-Software architecture is not only about what the software does, but also about how the software is structured to satisfy 
+its requirements, constraints and future changes. 
+
+-Software Architectures consist of many interacting components, interfaces, technologies, and dependencies.
+
+-Software architecture helps us define:
+how software is decomposed into components
+what responsibilities each component has
+how components communicate
+how data flows through the system
+how important quality requirements are achieved
+how the software can evolve when the system changes.
+
+# Software Architecture Decision
+
+An architecture decision is an important design choice that influences
+the structure, behavior, quality, or evolution of the system.
+An architecture decision should answer: What did we choose and why?
+
+the flow;
+Requirements and Constraints -> Quality Attributes -> Architecture Alternatives -> Trade-off Analysis -> Rationale -> Architecture Decision & Verification
+(the flow is similar with Systm Engineering because we also use similar reasoning there.However the difference is 
+at the software architecture decisions mostly focuses on the topics like; software components, interfaces, communication, task allocation and dependencies ) 
+
+# Quality Attributes:
+Functional requirements describe what a system should do.
+Quality attributes describe important characteristics of how well the system should do it or what properties the solution should have.
+The key point is: Different systems have different architectural priorities.
+Reliability: Beklenen fonksiyonu belirli kosullar altinda güvenilir sekilde gerceklestirmek.
+Modifiability: Software'i degistirebilme kolayligi.
+Maintainability: Software'in bakimini analizini ve güncellemesini kolaylastirma.
+Compatibility: Diger components veya versions ile uyumlu calisabilme. 
+Adaptability: Farkli environments ya da requirementslara uyarlanabilme.
+Performance: Timing, latency, throughtput ve resource kullanimi acisindan davranis
+Testability: Software'in dogrulanmasinin ve test edilebilmesinin kolayligi
+Stability: Belirli kosullar altinda beklenen davranisi koruyabilme. 
+Safety:
+Security:
+Scalability:
+Portability:
+
+# Trade-offs
+Improving one quality may negatively affect another. the real trade-off analysis compares, how alternatives affects differents qualifies.
+Higher abstraction + Better modifiability -> Better hardware independence
+-
+Additional complexity
+Possible processing overhead
+More interfaces to maintain
