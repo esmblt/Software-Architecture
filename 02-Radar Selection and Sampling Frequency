@@ -1,0 +1,35 @@
+# Two Different Radar Alternatives
+Assume two radar candidates:
+Radar A → 10 Hz
+Radar B → 20 Hz
+
+so the sampling frequency is:
+sampling frequency: saniyede kac ölcüm yaptigi
+Sampling period: iki ölcüm arasinda gecen süre
+Processing time: softwarein bir ölcümü islemek icin harcadigi süre
+10 Hz → one measurement every 100 ms
+20 Hz → one measurement every 50 ms
+
+However: 20 Hz is not automatically better than 10 Hz.
+First, we need to understand the system requirements. Suppose the requirement is:
+Radar update rate shall be ≥ 10 Hz.
+So both radar options satisfies the requirements.
+The decision must therefore consider additional criteria:
+detection range
+Field of View
+accuracy
+latency
+interface compatibility
+environmental conditions
+processing requirements
+power consumption
+cost
+
+Do not start with: "20 Hz is better."
+Start with: "What does my system require?"
+Then evaluate candidate solutions against those requirements.
+
+"Algorithm bir karar icin 5 sample kullaniyorsa, sampling frequncy degisince karr süresi de degisebilir."
+eger bir adapter olursa, bu adapter iki sensor verisini ayni formatta sunabilir ama yeni sensor'in timing characteristics'i sistemin requirements'ini karsilamayabilir. 
+Ayica: functional correctness: dogru sonucu üretmek.
+Temporal correctness: dogru sonucu gereken zamanda üretmek. 
