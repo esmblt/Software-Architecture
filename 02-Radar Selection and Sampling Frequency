@@ -33,3 +33,52 @@ Then evaluate candidate solutions against those requirements.
 eger bir adapter olursa, bu adapter iki sensor verisini ayni formatta sunabilir ama yeni sensor'in timing characteristics'i sistemin requirements'ini karsilamayabilir. 
 Ayica: functional correctness: dogru sonucu üretmek.
 Temporal correctness: dogru sonucu gereken zamanda üretmek. 
+
+# Sensor Replacement and Adapter Layer
+This is a very useful example because it connects System Architecture directly with Software Architecture.
+Assume the original system uses: Radar A
+The software directly communicates with Radar A: Obstacle Detection -> Radar A API -> Radar A
+Later, the system engineers decide to replace Radar A with Radar B.
+But Radar B has a different API:
+Radar A: getDistance()
+Radar B: readObjectData()
+If the application knows Radar A's API directly, replacing the sensor may require changes throughout the software.
+This creates strong coupling: Application -> Specific Radar
+Adapter Layer : Instead, we can introduce an abstraction:
+            Obstacle Detection
+                  ↓
+            Radar Interface
+                  ↓
+            Adapter Layer
+            ↙       ↘
+Radar A Adapter   Radar B Adapter
+          ↓           ↓
+      Radar A       Radar B
+
+The application works with a common interface, for example:
+Radar Interface
+getObjects()
+getDistance()
+getStatus()
+Each adapter translates between the common interface and the specific radar implementation.
+
+Why?
+Because we may have an important quality attribute:
+Modifiability
+We want to be able to replace the sensor without changing large parts of the software.
+So the reasoning becomes:
+System-Level Need
+↓
+Different sensors may need to be supported
+ 
+System Architecture Decision
+↓
+Sensor technology must be replaceable
+ 
+Software Quality Attribute
+↓
+Modifiability
+ 
+Software Architecture Decision
+↓
+Use an abstraction / adapter layer
