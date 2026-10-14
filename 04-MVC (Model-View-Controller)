@@ -1,0 +1,13 @@
+# Model-View-Controller (MVC)
+MVC is a pattern for organizing code within applications, particularly for user interfaces. It separates concerns into three components:
+Model: handles data and business logic
+View: manages presentation and user interface
+Controller: orchestrates user input and coordinates between the Model and the View
+
+This separation enables parallel development, where designers can focus on Views while developers work on Models. 
+It also improves testability and provides clear code organization. 
+Web frameworks like Ruby on Rails, Django, and ASP.NET MVC embrace this pattern, giving developers a shared vocabulary and predictable structure.
+
+MVC differs from layered architecture. It can exist entirely within a presentation layer and does not enforce strict communication rules between components. 
+Controllers tend to become bloated in complex applications, and modern single-page applications have evolved variations such as MVP and MVVM. 
+Understanding MVC provides a foundation for more complex architectural patterns.
