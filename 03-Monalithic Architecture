@@ -1,1 +1,15 @@
+# What Is a Monolithic Architecture?
+A monolithic architecture is a single codebase containing all business logic, deployed as one unit with everything running in the same process space.
+Build: Source code'dan runnable software artifact(cikti) üretmek
+Deployment: Software'i calisacagi hedef ortama yüklemek.
+Firmware: Embedded Hardware üzerinde calisan software
+Coupling: Software component arasindaki bagimlilik derecesi
+Overhead: Asil isi yapmanin disinda ortaya cikan ek computational veya communication maliyeti.
+
+Monolithic Example:
+Sensor Prossessing, Motion Control, Diagnostics, Motor Output -> One Firmware Image -> Microcontroller 
+
+Dört farkli module var ama software birlikte build ve deploy ediliyor. Ama burada iki önemli cikarimimiz var: 
+Monolithic her zaman tek module demek degildir.
+Monolithic her zaman high coupling anlamina da gelmez. (Modular Monolithic'lerde modüller arasinda düsük coupling olablir)
 
