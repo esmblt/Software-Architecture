@@ -1,0 +1,36 @@
+# Layered Architecture
+Layered architecture organizes code into distinct layers with specific responsibilities, where each layer typically communicates only with adjacent layers. 
+The classic three-tier approach separates:
+Presentation layer for user interaction
+Business logic layer for core processing and rules
+Data access layer for database operations
+
+Layering provides clear separation of concerns, isolates changes to specific layers, enables independent team work, and allows layers to be tested in isolation. 
+For example, switching databases affects only the data access layer, while adding a mobile app changes only the presentation layer and leaves business rules untouched.
+
+# Layered architecture, MVC’den daha geniş bir yapıdır. MVC çoğunlukla arayüz/presentation tarafını düzenler; layered architecture ise uygulamanın tamamını katmanlara ayırır.
+
+Parça parça:
+
+“enforces stricter communication patterns”
+Katmanlar arası iletişim daha sıkı kurallıdır.
+Mesela bir katman genelde sadece yanındaki katmanla konuşur.
+“holistic model for the entire application stack”
+Sadece ekran tarafını değil, tüm sistemi kapsar:
+UI + business logic + data access gibi
+Sonra dezavantajını söylüyor:
+
+“performance overhead from traversing layers”
+İstek bir iş yapmak için birkaç katmandan geçer
+bu da biraz ek maliyet/gecikme yaratabilir
+“over-engineering for simple applications”
+Basit bir uygulama için fazla karmaşık olabilir
+Son cümlede de “ne zaman mantıklı?” diyor:
+
+Monolith büyüyüp yönetmesi zorlaşınca
+Değişiklik yapmak riskli hale gelince
+Takımlar arasında daha net sınırlar gerekince
+Kısacası:
+
+MVC = daha çok UI düzenleme yaklaşımı
+Layered architecture = tüm uygulamayı düzenleme yaklaşımı
